@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "38a4ac74-6b3f-48d3-9b90-597bb12cf825",
+		"name": "Devai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15524764"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "dev",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mangal@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "aB345678",
+									"type": "text"
+								},
+								{
+									"key": "profileImg",
+									"type": "file",
+									"src": "/home/abc/Downloads/personal_pdf/images/avatar.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:3000/api/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"spidy12k@gmail.com\",\n    \"password\":\"aB345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "forgot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"spidy12k@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/auth/forget-password"
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"aB345678\",\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YmFhY2RkMjkzOGNhMGM2NzRiMTg0OCIsInVzZXIiOiJkZXYiLCJpYXQiOjE3MDY3MzMzNzAsImV4cCI6MTcwNjczNjk3MH0.QQ1gtugT34wRfAsXWbt3EIgesTWT6eBcz029-YqZ-gg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/auth/change-user-password/65baacdd2938ca0c674b1848"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/auth/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getuser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/user/65bbba1914df314335a96a19"
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"dev\"\n}"
+						},
+						"url": "http://localhost:3000/api/v1/user/update/65bbba1914df314335a96a19"
+					},
+					"response": []
+				},
+				{
+					"name": "allUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/user/all"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/user/delete/65bbba1914df314335a96a19"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "img",
+			"item": [
+				{
+					"name": "getImg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/image/1706801837422.jpeg"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
